@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".activities.PdfUnlockActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_ios"
+            app:tint="@color/colorTextIcons" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorTextIcons"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginEnd="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="@string/subject_code_a"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/subjectCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/stack"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="@string/note_code_a"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/noteCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/stack"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_bold"
+                    android:text="@string/note_name"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/noteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/stack"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/sf_bold"
+                android:includeFontPadding="false"
+                android:text="@string/note_password"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@null"
+                android:fontFamily="@font/sf_regular"
+                android:hint="@string/password_hint"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryText"
+                android:textColorHint="@color/colorHintText"
+                android:textSize="@dimen/_13ssp"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/unlockPdfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/sf_bold"
+                android:includeFontPadding="false"
+                android:text="@string/unlock_pdf"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="@dimen/_13ssp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

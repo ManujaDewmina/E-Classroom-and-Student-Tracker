@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".activities.TeacherNotesActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_ios"
+            app:tint="@color/colorTextIcons" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorTextIcons"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginEnd="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/sf_bold"
+                android:includeFontPadding="false"
+                android:textAlignment="center"
+                android:text="@string/e_classroom_n_student_tracker"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonUploadNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:layout_marginEnd="@dimen/_70sdp"
+                    android:fontFamily="@font/sf_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/upload_lecture_notes"
+                    android:backgroundTint="@color/colorTextIcons"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ProgressBar
+                    android:id="@+id/UploadNotesProgressBar"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"/>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonViewNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:layout_marginEnd="@dimen/_70sdp"
+                    android:fontFamily="@font/sf_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/view_uploaded_lecture_notes"
+                    android:backgroundTint="@color/colorTextIcons"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ProgressBar
+                    android:id="@+id/ViewNotesProgressBar"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"/>
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

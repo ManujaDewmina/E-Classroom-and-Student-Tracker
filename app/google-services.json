@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "354996285223",
+    "project_id": "onlineclassroom-73fb5",
+    "storage_bucket": "onlineclassroom-73fb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354996285223:android:826a582c44004bfcb48302",
+        "android_client_info": {
+          "package_name": "com.example.videomeeting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354996285223-877h40m53pqhqqc6qnoesf1qhu7l1klf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrJmvsKYqlra5WPQaFMB7I77_sNr2bD0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354996285223-877h40m53pqhqqc6qnoesf1qhu7l1klf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
